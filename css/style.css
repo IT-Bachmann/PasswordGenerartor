@@ -1,0 +1,120 @@
+:root {
+  --bg-light: #f9f9f9;
+  --bg-dark: #1e1e1e;
+  --text-light: #000;
+  --text-dark: #f0f0f0;
+  --primary: #4a90e2;
+  --border-radius: 8px;
+}
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+h1 {
+  font-size: 1.8rem;
+  margin: 0.5em 0;
+}
+#modeToggle {
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#modeToggle:hover {
+  background: #357ab8;
+}
+label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+input[type="number"],
+input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+.output {
+  width: 100%;
+  font-family: monospace;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 1em;
+  word-break: break-word;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+body.dark .output {
+  background: #2c2c2c;
+  color: var(--text-dark);
+  border-color: #444;
+}
+.button-group {
+  margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+}
+button:hover {
+  background: #357ab8;
+}
+.history {
+  margin-top: 2em;
+}
+.history-item {
+  background: #eee;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  margin: 5px 0;
+  font-family: monospace;
+  cursor: pointer;
+}
+body.dark .history-item {
+  background: #333;
+  color: var(--text-dark);
+}
+.clear-btn {
+  background: transparent;
+  color: red;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
