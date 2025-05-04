@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Passwort Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🔐 Passwort Generator</h1>
+      <button id="modeToggle">🌞 / 🌙</button>
+    </div>
+
+    <label>
+      Länge:
+      <input type="number" id="length" min="20" max="160" value="32" />
+    </label>
+
+    <label><input type="checkbox" id="lowercase" checked /> Kleinbuchstaben</label>
+    <label><input type="checkbox" id="uppercase" checked /> Großbuchstaben</label>
+    <label><input type="checkbox" id="numbers" checked /> Zahlen</label>
+    <label><input type="checkbox" id="symbols" checked /> Sonderzeichen</label>
+
+    <div class="button-group">
+      <button id="generateBtn">Generieren</button>
+      <button id="copyBtn">Kopieren</button>
+      <button id="downloadBtn">Download</button>
+      <button id="downloadHistoryBtn">Verlauf speichern</button>
+    </div>
+
+    <div class="output" id="passwordOutput" title="Klicken zum Kopieren">Hier erscheint das Passwort…</div>
+
+    <div class="history">
+      <h3>🔁 Verlauf <button class="clear-btn" id="clearBtn">×</button></h3>
+      <div id="historyList"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
